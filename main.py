@@ -12,3 +12,4 @@ while True:
             pygame.quit() # Close Window
             quit() # end pygame
 
+print('home')            
