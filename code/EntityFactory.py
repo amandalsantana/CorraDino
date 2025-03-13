@@ -23,7 +23,8 @@ class EntityFactory:
             #case 'Run':
                 return Player('Jogador', (1, 200))
                 # list_pl = []
-                # for i in range(1, 5):
+                # for i in range(1, 6):
+                #     list_pl.append(Player(f'Run ({i})', (1,200)))
                 #     list_pl.append(Player(f'Run ({i})', (1,200)))
                 # return list_pl
             case 'enemy2':  

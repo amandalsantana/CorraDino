@@ -13,4 +13,4 @@ class Enemy(Entity):
            self.rect.top = 0
 
         # Movendo da direita para a esquerda
-        self.rect.centerx -= ENTITY_SPEED[self.name] * 0.5
+        self.rect.centerx -= ENTITY_SPEED[self.name] * 2
