@@ -2,11 +2,24 @@
 import pygame
 
 
-COLOR_ORANGE = (230, 115, 0)
-COLOR_WHITE = (255, 255, 255)
-COLOR_BLACK = (0, 0, 0)
+C_ORANGE = (230, 115, 0)
+C_WHITE = (255, 255, 255)
+C_BLACK = (0, 0, 0)
+C_BROWN = (98, 49, 0)
+C_CYAN = (0, 128, 128)
 
 # E
+
+ENTITY_DAMAGE = {
+    'L1BG0' : 0,
+    'L1BG1' : 0,
+    'L1BG2' : 0,
+    'L1BG3' : 0,
+    'L1BG4' : 0,
+    'L1BG5' : 0,
+    'Jogador': 10,
+    'enemy2': 10    
+}
 
 ENTITY_HEALTH = {
     'L1BG0' : 999,
@@ -15,8 +28,8 @@ ENTITY_HEALTH = {
     'L1BG3' : 999,
     'L1BG4' : 999,
     'L1BG5' : 999,
-    'Jogador': 300,
-    'enemy2': 50
+    'Jogador': 30,
+    'enemy2': 10
 }
 
 ENTITY_SPEED = {
@@ -27,17 +40,20 @@ ENTITY_SPEED = {
     'L1BG4' : 4,
     'L1BG5' : 5,
     'Jogador': 3,
-    'enemy2': 3
+    'enemy2': 5
 }
 
 EVENT_ENEMY = pygame.USEREVENT + 1
 
+EVENT_TIMEOUT = pygame.USEREVENT + 2
+
 # M
-MENU_OPTION = ('NOVO JOGO 1P',
-               'NOVO JOGO 2P - COOPERATIVO',
-               'NOVO JOGO 2P - COMPETITIVO',
-               'PONTUACAO',
+MENU_OPTION = ('COMO JOGAR',
+               'JOGAR',
                'SAIR')
+
+# T
+TIMEOUT_STEP = 100
 
 # W
 WIN_WIDTH = 493

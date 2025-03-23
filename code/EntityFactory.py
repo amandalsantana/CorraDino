@@ -20,13 +20,6 @@ class EntityFactory:
                     list_bg.append(Background(f'L1BG{i}', (WIN_WIDTH,0)))
                 return list_bg
             case 'Jogador':
-            #case 'Run':
-                return Player('Jogador', (1, 200))
-                # list_pl = []
-                # for i in range(1, 6):
-                #     list_pl.append(Player(f'Run ({i})', (1,200)))
-                #     list_pl.append(Player(f'Run ({i})', (1,200)))
-                # return list_pl
+                return Player('Jogador', (1, 270))
             case 'enemy2':  
-                #return Enemy('Player1', (random.randint(0, WIN_HEIGHT), WIN_WIDTH + 10)) 
-                return Enemy('enemy2', (random.randint(0, WIN_WIDTH),0))           
+                 return Enemy('enemy2', (random.randint(0 - WIN_WIDTH//4, WIN_WIDTH + WIN_WIDTH//4),0))            
