@@ -1,11 +1,9 @@
 import pygame
 
-from code.Const import C_BLACK, C_ORANGE, C_WHITE, WIN_WIDTH
+from code.Const import C_ORANGE, C_WHITE, WIN_WIDTH
 import pygame.image
 from pygame import K_ESCAPE, Surface, Rect
 from pygame.font import Font
-
-from code.Menu import Menu
 
 
 class Instruction:
@@ -23,7 +21,7 @@ class Instruction:
             self.inst_text(50, "Como", C_ORANGE, ((WIN_WIDTH / 2), 90))
             self.inst_text(50, "jogar", C_ORANGE, ((WIN_WIDTH / 2), 130))
             self.inst_text(20, "O objetivo do jogo é salvar o dinossauro", C_WHITE, (250, 180))
-            self.inst_text(20, "dos meteoros que estão atingindo a Terra.", C_WHITE, (250, 200))
+            self.inst_text(20, "dos meteoros que estão caindo na Terra.", C_WHITE, (250, 200))
             self.inst_text(20, "Utilize as teclas LEFT e RIGHT", C_WHITE, (250, 220))
             self.inst_text(20, "para evitar que o dino seja atingido.", C_WHITE, (250, 240))
             self.inst_text(20, "VOLTAR AO MENU: tecla ESC", C_ORANGE, (250, 280))

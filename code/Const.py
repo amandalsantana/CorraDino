@@ -1,7 +1,6 @@
-# C
 import pygame
 
-
+# C
 C_ORANGE = (230, 115, 0)
 C_WHITE = (255, 255, 255)
 C_BLACK = (0, 0, 0)
@@ -18,7 +17,7 @@ ENTITY_DAMAGE = {
     'L1BG4' : 0,
     'L1BG5' : 0,
     'Jogador': 10,
-    'enemy2': 10    
+    'Inimigo': 10    
 }
 
 ENTITY_HEALTH = {
@@ -28,8 +27,8 @@ ENTITY_HEALTH = {
     'L1BG3' : 999,
     'L1BG4' : 999,
     'L1BG5' : 999,
-    'Jogador': 30,
-    'enemy2': 10
+    'Jogador': 100,
+    'Inimigo': 10
 }
 
 ENTITY_SPEED = {
@@ -40,7 +39,7 @@ ENTITY_SPEED = {
     'L1BG4' : 4,
     'L1BG5' : 5,
     'Jogador': 3,
-    'enemy2': 5
+    'Inimigo': 5
 }
 
 EVENT_ENEMY = pygame.USEREVENT + 1

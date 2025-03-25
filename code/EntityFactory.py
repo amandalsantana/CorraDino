@@ -1,9 +1,8 @@
-#-*- coding: utf-8 -*-
 
 import random
 import pygame
 from code.Background import Background
-from code.Const import WIN_HEIGHT, WIN_WIDTH
+from code.Const import WIN_WIDTH
 from code.Enemy import Enemy
 from code.Player import Player
 
@@ -21,5 +20,5 @@ class EntityFactory:
                 return list_bg
             case 'Jogador':
                 return Player('Jogador', (1, 270))
-            case 'enemy2':  
-                 return Enemy('enemy2', (random.randint(0 - WIN_WIDTH//4, WIN_WIDTH + WIN_WIDTH//4),0))            
+            case 'Inimigo':  
+                 return Enemy('Inimigo', (random.randint(0 - WIN_WIDTH//4, WIN_WIDTH + WIN_WIDTH//4),0))            

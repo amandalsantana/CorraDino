@@ -1,10 +1,9 @@
-#-*- coding: utf-8 -*-
 
 import sys
 from tkinter.font import Font
 import pygame
 from code.EntityMediator import EntityMediator
-from code.Const import C_BROWN, C_CYAN, C_ORANGE, C_WHITE, EVENT_ENEMY, EVENT_TIMEOUT, TIMEOUT_STEP, WIN_HEIGHT
+from code.Const import C_ORANGE, C_WHITE, EVENT_ENEMY, EVENT_TIMEOUT, TIMEOUT_STEP
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 
@@ -17,8 +16,8 @@ class Level:
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('L1BG'))
         self.entity_list.append(EntityFactory.get_entity('Jogador'))
-        self.timeout = 45000 # 25 segundos
-        pygame.time.set_timer(EVENT_ENEMY, 2000)
+        self.timeout = 50000 # 50 segundos
+        pygame.time.set_timer(EVENT_ENEMY, 1200) # controla a quantidade meteoro na tela
         pygame.time.set_timer(EVENT_TIMEOUT, TIMEOUT_STEP)
 
     def run(self):
@@ -32,7 +31,7 @@ class Level:
         while True:
             clock.tick(50)
             now = pygame.time.get_ticks()
-            
+            # controle da troca de imagens do jogador
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
@@ -47,13 +46,13 @@ class Level:
                     pygame.quit()
                     sys.exit()
                 if event.type == EVENT_ENEMY:
-                    self.entity_list.append(EntityFactory.get_entity('enemy2'))
+                    self.entity_list.append(EntityFactory.get_entity('Inimigo'))
                 if event.type == EVENT_TIMEOUT:
                     self.timeout -= TIMEOUT_STEP
                 if self.timeout <= 0:
                     for ent in self.entity_list:
-                        if ent.name == 'Jogador' and ent.health > 0:
-                           return True
+                        if ent.name == 'Jogador' and ent.health > 0: #jogador ganha o jogo
+                           return True 
 
             # printed text
             self.level_text(14, f'{self.name} - Timeout: {self.timeout / 1000 :.1f}s', C_WHITE, (10,5))
@@ -61,8 +60,8 @@ class Level:
             #Collisions
             EntityMediator.verify_collision(entity_list=self.entity_list)
             for ent in self.entity_list:
-                if ent.name == 'Jogador' and ent.health <= 0:
-                   return False
+                if ent.name == 'Jogador' and ent.health <= 0: #jogador perde o jogo
+                   return False 
             EntityMediator.verify_health(entity_list=self.entity_list)
         pass
 

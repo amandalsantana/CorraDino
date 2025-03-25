@@ -1,7 +1,6 @@
-#-*- coding: utf-8 -*-
 
 import pygame
-from code.Const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH
+from code.Const import ENTITY_SPEED, WIN_WIDTH
 from code.Entity import Entity
 
 class Player(Entity):

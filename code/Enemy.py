@@ -1,6 +1,5 @@
 
-
-from code.Const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH
+from code.Const import ENTITY_SPEED, WIN_HEIGHT
 from code.Entity import Entity
 
 class Enemy(Entity):
@@ -12,5 +11,5 @@ class Enemy(Entity):
         if self.rect.top >= WIN_HEIGHT:  # Se sair da tela por baixo
            self.rect.top = 0
 
-        # Movendo da direita para a esquerda
+        # Movendo da direita para a esquerdaou da esquerda para a direita 
         self.rect.centerx -= (1.0 if self.direction == "right_to_left" else -1.0) * ENTITY_SPEED[self.name] * 1.5

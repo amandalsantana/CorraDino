@@ -1,10 +1,8 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
 
 import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
-from code.Const import C_BLACK, C_ORANGE, C_WHITE, MENU_OPTION, WIN_HEIGHT, WIN_WIDTH
+from code.Const import C_BLACK, C_ORANGE, MENU_OPTION, WIN_WIDTH
 
 class Menu:
     def __init__(self, window):
@@ -19,8 +17,8 @@ class Menu:
         while True:
             # DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(50, "Corra,", C_ORANGE, ((WIN_WIDTH / 2), 90))
-            self.menu_text(50, "Dino!", C_ORANGE, ((WIN_WIDTH / 2), 130))
+            self.menu_text(50, "Corra,", C_ORANGE, ((WIN_WIDTH / 2), 95))
+            self.menu_text(50, "Dino!", C_ORANGE, ((WIN_WIDTH / 2), 140))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:

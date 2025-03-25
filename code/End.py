@@ -1,11 +1,9 @@
 import pygame
 
-from code.Const import C_BLACK, C_ORANGE, C_WHITE, WIN_WIDTH
+from code.Const import C_ORANGE, C_WHITE, WIN_WIDTH
 import pygame.image
 from pygame import K_ESCAPE, Surface, Rect
 from pygame.font import Font
-
-from code.Menu import Menu
 
 
 class End:
@@ -21,6 +19,7 @@ class End:
         if self.option == 1:
             while True:
                 # DRAW IMAGES
+                # mensagem quando o jogador vence
                 self.window.blit(source=self.surf, dest=self.rect)
                 self.end_text(40, "PARABÉNS!!!", C_ORANGE, ((WIN_WIDTH / 2), 110))
                 self.end_text(30, "Você salvou o dino!", C_WHITE, ((WIN_WIDTH / 2), 160))
@@ -40,6 +39,7 @@ class End:
         if self.option == 2:
             while True:
                 # DRAW IMAGES
+                # mensagem quando o jogador perde
                 self.window.blit(source=self.surf, dest=self.rect)
                 self.end_text(40, "VOCÊ PERDEU!!!", C_ORANGE, ((WIN_WIDTH / 2), 110))
                 self.end_text(30, "O dino não foi salvo dessa vez...", C_WHITE, ((WIN_WIDTH / 2), 160))
